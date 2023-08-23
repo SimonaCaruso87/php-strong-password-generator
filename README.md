@@ -11,3 +11,52 @@ Invece di visualizzare la password nella index, effettuare un redirect ad una pa
 Milestone 4 (BONUS)
 Gestire ulteriori parametri per la password: quali caratteri usare fra numeri, lettere e simboli. Possono essere scelti singolarmente (es. solo numeri) oppure possono essere combinati fra loro (es. numeri e simboli, oppure tutti e tre insieme).
 Dare all'utente anche la possibilità di permettere o meno la ripetizione di caratteri uguali.
+
+<!-- // Milestone 1
+// Creare un form che invii in GET la lunghezza della password. 
+// Una nostra funzione utilizzerà questo dato per generare una password casuale (composta da lettere, 
+// lettere maiuscole, numeri e simboli) da restituire all'utente.
+
+//password combinata
+// $comb = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+// $shfl = str_shuffle($comb);
+// $pwd = substr($shfl,0,8);
+// echo $pwd;
+
+// password numeri
+// $combNumb = '0123456789';
+// $pass = array(); 
+// $combLen = strlen($combNumb) - 1; 
+//  for ($i = 0; $i < 8; $i++) {
+//      $n = rand(0, $combLen);
+//      $pass[] = $combNumb[$n];
+//  }
+//  echo(implode($pass)); 
+
+// $simboli["minuscole"] = 'abcdefghijklmnopqrstuvwxyz';
+// $simboli["maiuscole"] = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+// $simboli["numeri"] = '1234567890';
+// $simboli["caratteri_speciali"] = '!?~@#-_+<>[]{}';
+
+$letters = "abcdefghijklmnopqrstuvwxyz";
+$uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+$numbers = "1234567890";
+$characthers_special = "!?~@#-_+<>[]{}";
+$shfl = str_shuffle($letters . $numbers . $characthers_special . $uppercase);
+$pwd = substr($shfl,0,12);
+echo $pwd . " ";
+
+$lunghezza = strlen($pwd);
+
+// $_POST($lunghezza);
+
+$lunghezzaPost = $_POST('nome');
+
+
+// $pwd = $_POST['pwd'];
+// $lunghezza = strlen($pwd);
+
+
+// $paragrafo = $_POST['paragrafo'];
+// $lunghezza = strlen($paragrafo);
+// $_POST($paragrafo); -->
