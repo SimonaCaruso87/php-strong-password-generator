@@ -33,7 +33,7 @@
         <title>Password Generator</title>
 
         <!-- STYLE -->
-        <link rel="stylesheet" href="/bonus/style.css">
+        <link rel="stylesheet" href="./style.css">
     </head>
     
 
@@ -59,7 +59,8 @@
                                     <p>Lunghezza Password:</p>
                                 </div>
                                 <div class="input-container">
-                                    <input type="number" class="form-control" name="password">
+                                    <!-- per dare valore numerico minimo e massimo dentro input usare min e max -->
+                                    <input type="number" class="form-control" name="password" min="0" max="12" style="width: 250px;">
                                 </div>
                             </div>
                             <div class="mb-3 d-flex">
